@@ -1,0 +1,38 @@
+.toolbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toolbar-logout-button {
+    font-size: 16px;
+}
+
+.toolbar-orders-logo {
+    font-size: 30px;
+}
+
+table {
+    width: 100%;
+  }
+
+.table-container {
+    margin: 50px;
+}
+.control-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.filter {
+    background-color: #424242;
+    padding: 10px;
+}
+
+.create-data {
+    height: 40px;
+    transform: translateY(100%)
+}
