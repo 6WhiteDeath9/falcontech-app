@@ -1,10 +1,37 @@
-<div mat-dialog-content>
-  <mat-form-field appearance="fill">
-    <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="data.name">
-  </mat-form-field>
+<div mat-dialog-content style="padding: 20px;">
+
+    <!-- <mat-form-field appearance="fill">
+    <mat-label>Broj narudžbe</mat-label>
+    <input matInput [(ngModel)]="data.position">
+  </mat-form-field> -->
+
+    <mat-form-field appearance="fill">
+        <mat-label>Naziv narudžbe</mat-label>
+        <input matInput [(ngModel)]="data.name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Kupac</mat-label>
+        <input matInput [(ngModel)]="data.customer">
+    </mat-form-field>
+
+    <div *ngIf="data.position != null" style="margin-bottom: 15px;">
+        <mat-checkbox [checked]="data.active" (change)="checkboxChange($event)">Status</mat-checkbox>
+    </div>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Datum</mat-label>
+        <input matInput type="date" [(ngModel)]="data.date">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Cijena</mat-label>
+        <input matInput type="number" [(ngModel)]="data.price">
+    </mat-form-field>
+
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+
+<div mat-dialog-actions style="justify-content: space-between;">
+    <button mat-button (click)="add(data)">Save</button>
+    <button mat-button (click)="onNoClick()">Cancel</button>
 </div>
