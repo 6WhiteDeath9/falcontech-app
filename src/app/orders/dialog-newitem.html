@@ -1,29 +1,35 @@
 <div mat-dialog-content style="padding: 20px;">
 
+    <!-- Broj narudžbe -->
     <!-- <mat-form-field appearance="fill">
     <mat-label>Broj narudžbe</mat-label>
     <input matInput [(ngModel)]="data.position">
-  </mat-form-field> -->
+    </mat-form-field> -->
 
+    <!-- Naziv narudžbe -->
     <mat-form-field appearance="fill">
         <mat-label>Naziv narudžbe</mat-label>
         <input matInput [(ngModel)]="data.name">
     </mat-form-field>
 
+    <!-- Kupac -->
     <mat-form-field appearance="fill">
         <mat-label>Kupac</mat-label>
         <input matInput [(ngModel)]="data.customer">
     </mat-form-field>
 
+    <!-- Status -->
     <div *ngIf="data.position != null" style="margin-bottom: 15px;">
         <mat-checkbox [checked]="data.active" (change)="checkboxChange($event)">Status</mat-checkbox>
     </div>
 
+    <!-- Datum -->
     <mat-form-field appearance="fill">
         <mat-label>Datum</mat-label>
         <input matInput type="date" [(ngModel)]="data.date">
     </mat-form-field>
 
+    <!-- Cijena -->
     <mat-form-field appearance="fill">
         <mat-label>Cijena</mat-label>
         <input matInput type="number" [(ngModel)]="data.price">

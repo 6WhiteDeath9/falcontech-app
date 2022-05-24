@@ -14,11 +14,12 @@
 
 table {
     width: 100%;
-  }
+}
 
 .table-container {
     margin: 50px;
 }
+
 .control-container {
     display: flex;
     justify-content: space-between;
@@ -35,4 +36,19 @@ table {
 .create-data {
     height: 40px;
     transform: translateY(100%)
+}
+
+.actionbutton-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: inherit;
+}
+
+.action-button {
+    width: 30%;
+}
+
+.save-edit {
+    display: flex;
+    justify-content: space-evenly;
 }
